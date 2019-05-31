@@ -65,4 +65,4 @@ typings/
 .next
 
 # ignore react-native app test
-test/rnapptest/*
+__tests__/rnapptest/*

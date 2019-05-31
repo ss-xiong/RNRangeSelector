@@ -26,7 +26,7 @@
     "react-test-renderer": "16.8.3"
   },
   "jest": {
-    "preset": "react-native"
+    "testPathIgnorePatterns": ["rnapptest"]
   },
   "author": "bigsomg@gmail.com",
   "license": "MIT"

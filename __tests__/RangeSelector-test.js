@@ -7,6 +7,8 @@ import React from 'react';
 import { View } from 'react-native'
 import RangeSelector from '../index';
 
+console.log(RangeSelector)
+
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
