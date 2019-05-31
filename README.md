@@ -3,6 +3,10 @@ simple range selector for reactnative
 
 ---
 
+![ReactNative RangeSelector](https://raw.githubusercontent.com/ss-xiong/reactnative-range-selector/master/ReactNative-RangeSelector.gif)
+
+---
+
 ## Install
 ```bash
 npm i -S reactnative-range-selector
