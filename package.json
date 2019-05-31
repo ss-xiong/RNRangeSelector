@@ -7,16 +7,12 @@
     "test": "npm run test"
   },
   "keywords": [
-    "react",
-    "select",
-    "range",
     "reactnative",
-    "select",
-    "range",
     "jdreact",
+    "react",
     "select",
     "range"
   ],
-  "author": "xiongsongsong.xss@gmail.com",
+  "author": "bigsomg@gmail.com",
   "license": "MIT"
 }
