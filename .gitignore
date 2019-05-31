@@ -64,10 +64,5 @@ typings/
 # next.js build output
 .next
 
-<<<<<<< HEAD
 # ignore react-native app test
-test/rnapptest/
-=======
-# ignore rnapp
-test/rnapptest/
->>>>>>> 72ddb5cd97cec087327f44f4b644c101d2a3b303
+test/rnapptest/*
