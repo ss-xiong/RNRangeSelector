@@ -1,6 +1,6 @@
 {
   "name": "reactnative-range-selector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "slide to select range",
   "main": "index.js",
   "scripts": {
