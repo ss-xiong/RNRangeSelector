@@ -1,10 +1,14 @@
 {
-  "name": "slider-select",
+  "name": "range-selector",
   "version": "1.0.0",
   "description": "slide to select range",
   "main": "index.js",
   "scripts": {
     "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ss-xiong/slider-select"
   },
   "keywords": [
     "reactnative",
