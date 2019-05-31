@@ -1,5 +1,5 @@
 {
-  "name": "range-selector",
+  "name": "reactnative-range-selector",
   "version": "1.0.0",
   "description": "slide to select range",
   "main": "index.js",

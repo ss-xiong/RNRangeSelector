@@ -5,14 +5,14 @@ simple range selector for reactnative
 
 ## Install
 ```bash
-npm i -S range-selector
+npm i -S reactnative-range-selector
 ```
 
 ## Usage
 ```javascript
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import RangeSelector from 'range-selector'
+import RangeSelector from 'reactnative-range-selector'
 
 class App extends Component {
   slideToChange = ({ min, max }) => {
@@ -73,14 +73,10 @@ class App extends Component {
   }
 
   // function onSliderStart will emit on slide start
-  onSliderStart = ({ min, max }) => {
-
-  }
+  onSliderStart = ({ min, max }) => {}
 
   // function onSliderEnd will emit on slide end
-  onSliderEnd = ({ min, max }) => {
-
-  }
+  onSliderEnd = ({ min, max }) => {}
 
   render() {
 
@@ -117,4 +113,4 @@ class App extends Component {
 ```
 
 ## FAQ
-Any question please contact me. welcome start, welcome fork.
+Any question please contact me. welcome star, welcome fork.

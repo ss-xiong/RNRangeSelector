@@ -129,7 +129,7 @@ class PriceSlider extends PureComponent {
     }
 
     // 触发滑动结束
-    this.props.sliderMoveEnd()
+    this.props.sliderMoveEnd(this.getComputeValue())
   }
 
   // 第二个滑块滑动的时候
@@ -193,19 +193,25 @@ class PriceSlider extends PureComponent {
     }
 
     // 触发滑动结束
-    this.props.sliderMoveEnd()
+    this.props.sliderMoveEnd(this.getComputeValue())
   }
 
   // 设置第一个滑块距离左边的距离
   setFirstSliderLeft = (left) => {
     // 设置第一个滑块距离左边的距离，然后计算变化的价格
-    this.setState({ firstSliderLeft: left }, this.computePrice)
+    this.setState({ firstSliderLeft: left },() => {
+      const changeValue = this.getComputeValue()
+      this.props.onMoveChange(changeValue)
+    })
   }
 
   // 设置第二个滑块距离左边的距离
   setSecondSliderLeft = (left) => {
     // 设置第二个滑块距离左边的距离，然后计算变化的价格
-    this.setState({ secondSliderLeft: left }, this.computePrice)
+    this.setState({ secondSliderLeft: left }, () => {
+      const changeValue = this.getComputeValue()
+      this.props.onMoveChange(changeValue)
+    })
   }
 
   // New：使用固定块来获取可移动距离
@@ -215,17 +221,17 @@ class PriceSlider extends PureComponent {
   }
 
   // 计算价格的变化。反馈到父组件
-  computePrice = () => {
+  getComputeValue = () => {
     const { firstSliderLeft, secondSliderLeft } = this.state
     const { pricePerPx } = this.distance
 
-    const slideMinPrice = Math.min(firstSliderLeft, secondSliderLeft) * pricePerPx
-    const slideMaxPrice = Math.max(firstSliderLeft, secondSliderLeft) * pricePerPx
+    const slideMinValue = Math.min(firstSliderLeft, secondSliderLeft) * pricePerPx
+    const slideMaxValue = Math.max(firstSliderLeft, secondSliderLeft) * pricePerPx
 
-    this.props.onMoveChange({
-      min: slideMinPrice,
-      max: slideMaxPrice
-    })
+    return {
+      min: slideMinValue,
+      max: slideMaxValue
+    }
   }
 
   // 获取连线位置信息
