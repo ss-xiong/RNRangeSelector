@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import { View, PanResponder, Image, StyleSheet } from 'react-native'
 import * as utils from './utils'
 
-// 滑块链接地址
-const SliderImg = 'https://img14.360buyimg.com/uba/jfs/t1/31043/1/14595/6931/5cbeceb7Eaab104c1/b0452b5d478f760e.png'
-
 import styles from './style'
 
 class PriceSlider extends PureComponent {
@@ -30,7 +27,7 @@ class PriceSlider extends PureComponent {
     onMoveChange: () => {},
     sliderMoveStart: () => {},
     sliderMoveEnd: () => {},
-    getSlider: () => (<Image source={{uri: SliderImg}} style={styles.sliderImg} />),
+    getSlider: () => (<View style={styles.sliderStyle} />),
     backgroundBarStyle: {
       backgroundColor: '#F0F2F5',
       height: utils.getRpx(4),
@@ -271,6 +268,7 @@ class PriceSlider extends PureComponent {
     // 样式
     const barStyles = StyleSheet.create({
       backgroundBarStyle: {
+        backgroundColor: '',
         ...backgroundBarStyle,
         position: 'absolute',
         top: bgBarHeight,
