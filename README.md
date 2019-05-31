@@ -1,4 +1,4 @@
-# RangeSelector
+# ReactNative RangeSelector
 simple range selector for reactnative
 
 ---

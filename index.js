@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { View, PanResponder, Image, StyleSheet } from 'react-native'
-import * as utils from './utils'
 
+import * as utils from './utils'
 import styles from './style'
 
 class PriceSlider extends PureComponent {
@@ -58,7 +58,7 @@ class PriceSlider extends PureComponent {
   // 开始时候需要记录初始值
   handleStartShouldSetPanResponder = () => {
     // 触发开始滑动事件
-    this.props.sliderMoveStart()
+    this.props.sliderMoveStart(this.getComputeValue())
     return true
   }
 
